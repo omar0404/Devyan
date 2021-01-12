@@ -40,9 +40,6 @@ buck-out/
 \.buckd/
 *.keystore
 !debug.keystore
-# Misc
-#
-.env.dev
 
 # fastlane
 #
