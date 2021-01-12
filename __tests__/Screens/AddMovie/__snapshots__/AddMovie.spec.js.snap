@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddMovie Screen should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "flex": 1,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "gray",
+          "borderStyle": "dotted",
+          "borderWidth": 1,
+          "flex": 1,
+          "flexBasis": 40,
+          "justifyContent": "center",
+          "marginRight": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "gray",
+              "fontSize": 50,
+            },
+            undefined,
+            Object {
+              "fontFamily": "Entypo",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "gray",
+            "marginTop": 12,
+            "textAlign": "center",
+          }
+        }
+      >
+         Upload Movie
+        
+
+        Poster
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 3,
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholder="Title *"
+        placeholderTextColor="gray"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "borderBottomColor": "gray",
+            "borderBottomWidth": 1,
+            "borderRadius": 5,
+            "color": "gray",
+            "fontSize": 18,
+            "height": 45,
+            "marginTop": 40,
+            "padding": 10,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholder="Overview"
+        placeholderTextColor="gray"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "borderBottomColor": "gray",
+            "borderBottomWidth": 1,
+            "borderRadius": 5,
+            "color": "gray",
+            "fontSize": 18,
+            "height": 45,
+            "marginTop": 40,
+            "padding": 10,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholder="Date"
+        placeholderTextColor="gray"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "borderBottomColor": "gray",
+            "borderBottomWidth": 1,
+            "borderRadius": 5,
+            "color": "gray",
+            "fontSize": 18,
+            "height": 45,
+            "marginTop": 40,
+            "padding": 10,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "gray",
+        "borderRadius": 5,
+        "height": 50,
+        "justifyContent": "center",
+        "marginTop": 50,
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(255, 255, 255)",
+          "fontSize": 15,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Add Movie
+    </Text>
+  </View>
+</View>
+`;

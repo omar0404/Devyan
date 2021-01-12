@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section Componennt renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": "auto",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#991F25",
+        "height": 15,
+        "width": 5,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "color": "rgb(255, 255, 255)",
+        "fontSize": 18,
+        "marginLeft": 8,
+      }
+    }
+  />
+</View>
+`;

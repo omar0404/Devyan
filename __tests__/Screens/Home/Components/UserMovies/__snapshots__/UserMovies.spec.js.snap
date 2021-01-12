@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserMovies Component with movies  should render user movies   1`] = `
+<RCTScrollView
+  horizontal={true}
+  style={
+    Object {
+      "marginTop": 10,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 200,
+            "marginRight": 20,
+            "width": 200,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderColor": "gray",
+              "borderWidth": 1,
+              "flex": 2,
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "gray",
+                "fontSize": 50,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Entypo",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "marginTop": 12,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "borderColor": "white",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "color": "rgb(255, 255, 255)",
+                "flex": 1,
+              }
+            }
+          />
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "color": "#991F25",
+                "flex": 1,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "textAlign": "right",
+              }
+            }
+          />
+        </View>
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "gray",
+              "marginTop": 12,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 200,
+            "marginRight": 20,
+            "width": 200,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderColor": "gray",
+              "borderWidth": 1,
+              "flex": 2,
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "gray",
+                "fontSize": 50,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Entypo",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "marginTop": 12,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "borderColor": "white",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "color": "rgb(255, 255, 255)",
+                "flex": 1,
+              }
+            }
+          />
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "color": "#991F25",
+                "flex": 1,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "textAlign": "right",
+              }
+            }
+          />
+        </View>
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "gray",
+              "marginTop": 12,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

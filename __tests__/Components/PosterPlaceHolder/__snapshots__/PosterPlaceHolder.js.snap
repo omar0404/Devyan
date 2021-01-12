@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PosterPlaceHolder Componennt renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderColor": "gray",
+        "borderWidth": 1,
+        "flex": 2,
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "gray",
+          "fontSize": 50,
+        },
+        undefined,
+        Object {
+          "fontFamily": "Entypo",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+</View>
+`;

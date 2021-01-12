@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyMoviesHeader Component should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": "auto",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#991F25",
+          "height": 15,
+          "width": 5,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "rgb(255, 255, 255)",
+          "fontSize": 18,
+          "marginLeft": 8,
+        }
+      }
+    >
+      My Movies
+    </Text>
+  </View>
+  <Text
+    allowFontScaling={false}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "color": "#991F25",
+          "fontSize": 25,
+        },
+        undefined,
+        Object {
+          "fontFamily": "Ionicons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+</View>
+`;
