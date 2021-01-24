@@ -1,29 +1,19 @@
 import React from 'react';
-import {MyMovies} from 'MoviesApp/src/Screens/Home/Components/MyMovies/MyMovies';
-import {shallow} from 'enzyme';
+import MyMovies from 'Devyan/src/Screens/Home/Components/MyMovies';
 
 import {create} from 'react-test-renderer';
+import UserMovies from 'Devyan/src/Screens/Home/Components/UserMovies';
 
 describe('MyMovies Componennt', () => {
   it('should render correctly', () => {
     let wrapper = create(<MyMovies />).toJSON();
     expect(wrapper).toMatchSnapshot();
   });
-  it('should add added movie in user movies', () => {
-    const movie = {name: 'Batman'};
-    let wrapper = shallow(<MyMovies navigation={jest.fn()} />);
-    wrapper.setProps({
-      navigationParams: {addedMovie: movie},
-    });
-    const moviesState = wrapper.state().movies;
-    expect(moviesState).toContainEqual(movie);
-  });
-  it('should navigate to add movie screen', () => {
-    const navigate = jest.fn();
-    const navigation = {navigate};
-    let wrapper = shallow(<MyMovies navigation={navigation} />);
-    const handleAddNewMoviePress = wrapper.instance().handleAddNewMoviePress;
-    handleAddNewMoviePress();
-    expect(navigate).toBeCalled();
+
+  it('should call onMoviePress CB Prop', () => {
+    const onMoviePress = jest.fn();
+    let wrapper = create(<MyMovies onMoviePress={onMoviePress} />);
+    wrapper.root.find(UserMovies).props.onMoviePress();
+    expect(onMoviePress).toBeCalled();
   });
 });

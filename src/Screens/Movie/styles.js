@@ -1,10 +1,9 @@
 import {StyleSheet} from 'react-native';
-import theme from 'MoviesApp/src/Theme';
+import theme from 'Devyan/src/Theme';
 const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.backgroundColor,
     flex: 1,
-    padding: 15,
   },
   formContainer: {
     flexDirection: 'row',

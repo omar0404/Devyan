@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import theme from 'MoviesApp/src/Theme';
+import theme from 'Devyan/src/Theme';
 const styles = StyleSheet.create({
   container: {
     flex: 1,

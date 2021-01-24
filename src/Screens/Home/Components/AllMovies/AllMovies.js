@@ -1,20 +1,41 @@
 import React, {useState} from 'react';
-import {Section, MovieCard} from 'MoviesApp/src/Components';
-import {FlatList, ActivityIndicator, Platform} from 'react-native';
+import {Section, MovieCard} from 'Devyan/src/Components';
+import {FlatList, ActivityIndicator, Platform, TextInput} from 'react-native';
 import useFetchMovies from './useFetchMovies';
-import theme from 'MoviesApp/src/Theme';
+import theme from 'Devyan/src/Theme';
 import {mapMovieObject} from './utils';
-
+import PropTypes from 'prop-types';
 import styles from './styles';
 
 const handleEndReached = (setPage) => () => {
   setPage((prevPage) => prevPage + 1);
 };
 
-const renderMovie = ({item: movie}) => {
+const renderMovie = (onLikePress, likedMovies, onMoviePress) => ({
+  item: movie,
+}) => {
   const mappedMovie = mapMovieObject(movie);
   return (
-    <MovieCard containerStyle={styles.movieCardContainer} movie={mappedMovie} />
+    <MovieCard
+      onPress={() => onMoviePress(mappedMovie)}
+      isLiked={likedMovies[movie.id]}
+      onLikePress={() => onLikePress(mappedMovie)}
+      containerStyle={styles.movieCardContainer}
+      movie={mappedMovie}
+    />
+  );
+};
+const renderHeader = (setSearchQuery, setPage) => {
+  return (
+    <TextInput
+      style={styles.textInput}
+      placeholderTextColor={theme.textInput.placeHolderColor}
+      placeholder={'Search..'}
+      onChangeText={(val) => {
+        setSearchQuery(val);
+        setPage(1);
+      }}
+    />
   );
 };
 const renderFooter = (isFetchingMovies) => {
@@ -26,16 +47,18 @@ const renderFooter = (isFetchingMovies) => {
   );
 };
 
-const handleKeyExtractor = (movie, index) => {
-  return `${movie.id}${index}`;
+const handleKeyExtractor = (movie) => {
+  return movie.id;
 };
-const AllMovies = () => {
+const AllMovies = ({onLikePress, likedMovies, onMoviePress}) => {
   const [page, setPage] = useState(1);
-  const [movies, isFetchingMovies] = useFetchMovies(page);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [movies, isFetchingMovies] = useFetchMovies(page, searchQuery);
   const onEndReachedThreshold = Platform.select({
     ios: 0,
     android: 5,
   });
+
   return (
     <>
       <Section title={'All Movies'} containerStyle={styles.section} />
@@ -44,11 +67,19 @@ const AllMovies = () => {
         keyExtractor={handleKeyExtractor}
         onEndReached={handleEndReached(setPage)}
         onEndReachedThreshold={onEndReachedThreshold}
-        renderItem={renderMovie}
+        renderItem={renderMovie(onLikePress, likedMovies, onMoviePress)}
+        ListHeaderComponent={renderHeader(setSearchQuery, setPage)}
         ListFooterComponent={renderFooter(isFetchingMovies)}
       />
     </>
   );
+};
+AllMovies.propTypes = {
+  likedMovies: PropTypes.shape({
+    [PropTypes.number]: PropTypes.object,
+  }),
+  onLikePress: PropTypes.func,
+  onMoviePress: PropTypes.func,
 };
 export {handleEndReached, renderMovie, renderFooter, handleKeyExtractor};
 export default AllMovies;

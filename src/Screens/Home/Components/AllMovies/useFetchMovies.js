@@ -1,29 +1,53 @@
-import {useState, useEffect} from 'react';
-import {getMovies} from 'MoviesApp/src/Api/movies';
-const useFetchMovies = (page) => {
+import {useState, useEffect, useRef} from 'react';
+import {getMovies, searchMovies} from 'Devyan/src/Api/movies';
+import {useFetch} from 'Devyan/src/hooks';
+import humps from 'lodash-humps';
+
+const useFetchMovies = (page, query) => {
+  const [fetch, response, isLoading, error] = useFetch();
   const [movies, setMovies] = useState([]);
-  const [isFetchingMovies, setIsFetchingMovies] = useState(false);
-  const handleFetchMoviesSuccess = (res) => {
-    setMovies((prevMovies) => [...prevMovies, ...res.data.results]);
+  const oldQuery = useRef();
+  useEffect(() => {
+    if (!response) {
+      return;
+    }
+    const returnedMovies = humps(response.data.results);
+    if (!query) {
+      setMovies((prevMovies) => [...prevMovies, ...returnedMovies]);
+      return;
+    }
+    setMovies(returnedMovies);
+    return;
+  }, [response]);
+  const handleGetMovies = (page) => () => {
+    return getMovies(page);
   };
-  const handleFetchMoviesFailure = () => {
-    // error handler
+  const handleSearchMovies = (query) => () => {
+    return searchMovies(query);
   };
-  const handleFetchMoviesSettled = () => {
-    setIsFetchingMovies(false);
-  };
-  const fetchMovies = () => {
-    setIsFetchingMovies(true);
-    getMovies(page)
-      .then(handleFetchMoviesSuccess)
-      .catch(handleFetchMoviesFailure)
-      .finally(handleFetchMoviesSettled);
+  const handleRemoveSearchValue = () => {
+    if (oldQuery.current?.length && !query.length) {
+      setMovies([]);
+    }
   };
   useEffect(() => {
-    fetchMovies();
-  }, [page]);
+    if (!error) {
+      return;
+    }
+    setMovies([]);
+  }, [error]);
+  useEffect(() => {
+    handleRemoveSearchValue();
+    oldQuery.current = query;
+    if (!query) {
+      fetch(handleGetMovies(page));
+      return;
+    }
+    fetch(handleSearchMovies(query));
+    return () => {};
+  }, [page, query]);
 
-  return [movies, isFetchingMovies];
+  return [movies, isLoading];
 };
 
 export default useFetchMovies;

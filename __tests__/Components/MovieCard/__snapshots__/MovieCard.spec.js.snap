@@ -2,15 +2,22 @@
 
 exports[`Movie Card Componennt renders correctly 1`] = `
 <View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
-    Array [
-      Object {
-        "height": 200,
-        "marginRight": 20,
-        "width": 200,
-      },
-      undefined,
-    ]
+    Object {
+      "height": 200,
+      "marginRight": 20,
+      "opacity": 1,
+      "width": 200,
+    }
   }
 >
   <View
@@ -73,19 +80,42 @@ exports[`Movie Card Componennt renders correctly 1`] = `
             "flex": 1,
           }
         }
-      />
-      <Text
-        numberOfLines={1}
-        style={
-          Object {
-            "color": "#991F25",
-            "flex": 1,
-            "fontWeight": "bold",
-            "marginLeft": 10,
-            "textAlign": "right",
+      >
+        <Text>
+           
+        </Text>
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#991F25",
+              "flex": 1,
+              "fontWeight": "bold",
+              "textAlign": "right",
+            }
           }
+        />
+      </Text>
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 30,
+            },
+            undefined,
+            Object {
+              "fontFamily": "Material Icons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
         }
-      />
+      >
+        
+      </Text>
     </View>
     <Text
       numberOfLines={3}
@@ -102,15 +132,22 @@ exports[`Movie Card Componennt renders correctly 1`] = `
 
 exports[`Movie Card Componennt renders movie poster 1`] = `
 <View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
-    Array [
-      Object {
-        "height": 200,
-        "marginRight": 20,
-        "width": 200,
-      },
-      undefined,
-    ]
+    Object {
+      "height": 200,
+      "marginRight": 20,
+      "opacity": 1,
+      "width": 200,
+    }
   }
 >
   <Image
@@ -152,19 +189,42 @@ exports[`Movie Card Componennt renders movie poster 1`] = `
             "flex": 1,
           }
         }
-      />
-      <Text
-        numberOfLines={1}
-        style={
-          Object {
-            "color": "#991F25",
-            "flex": 1,
-            "fontWeight": "bold",
-            "marginLeft": 10,
-            "textAlign": "right",
+      >
+        <Text>
+           
+        </Text>
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#991F25",
+              "flex": 1,
+              "fontWeight": "bold",
+              "textAlign": "right",
+            }
           }
+        />
+      </Text>
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 30,
+            },
+            undefined,
+            Object {
+              "fontFamily": "Material Icons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
         }
-      />
+      >
+        
+      </Text>
     </View>
     <Text
       numberOfLines={3}

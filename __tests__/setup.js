@@ -1,7 +1,7 @@
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import 'react-native-gesture-handler/jestSetup';
-// import Moviess from 'MoviesApp/src/Api/movies'
+// import Moviess from 'Devyan/src/Api/movies'
 Enzyme.configure({adapter: new Adapter()});
 
 jest.mock('react-native-reanimated', () => {
@@ -26,11 +26,11 @@ jest.mock('react-native-image-picker', () => {
     },
   };
 });
-jest.mock('MoviesApp/src/Navigation/withNavigation', () => {
+jest.mock('Devyan/src/Navigation/withNavigation', () => {
   return (component) => component;
 });
 
-jest.mock('MoviesApp/src/Api/movies', () => ({
+jest.mock('Devyan/src/Api/movies', () => ({
   getMovies: jest.fn(() => {
     return new Promise((resolve, reject) => {
       resolve({data: {results: [{name: 'Batman'}]}});

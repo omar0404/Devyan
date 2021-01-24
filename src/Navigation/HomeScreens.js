@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Home, AddMovie} from '../Screens';
-import theme from 'MoviesApp/src/Theme';
+import {Home, Movie} from '../Screens';
+import theme from 'Devyan/src/Theme';
 const MainStack = createStackNavigator();
 const HomeScreens = () => {
   return (
@@ -12,11 +12,7 @@ const HomeScreens = () => {
         headerTintColor: theme.headerTintColor,
       }}>
       <MainStack.Screen name="Home" component={Home} />
-      <MainStack.Screen
-        name="AddMovie"
-        options={{title: 'Add Movie'}}
-        component={AddMovie}
-      />
+      <MainStack.Screen name="Movie" component={Movie} />
     </MainStack.Navigator>
   );
 };

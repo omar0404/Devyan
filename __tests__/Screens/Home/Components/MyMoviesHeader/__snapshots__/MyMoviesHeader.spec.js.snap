@@ -43,26 +43,5 @@ exports[`MyMoviesHeader Component should render correctly 1`] = `
       My Movies
     </Text>
   </View>
-  <Text
-    allowFontScaling={false}
-    onPress={[Function]}
-    style={
-      Array [
-        Object {
-          "color": "#991F25",
-          "fontSize": 25,
-        },
-        undefined,
-        Object {
-          "fontFamily": "Ionicons",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    
-  </Text>
 </View>
 `;

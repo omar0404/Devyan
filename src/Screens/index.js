@@ -1,4 +1,4 @@
 import Home from './Home';
-import AddMovie from './AddMovie';
+import Movie from './Movie';
 
-export {Home, AddMovie};
+export {Home, Movie};

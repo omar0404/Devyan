@@ -11,13 +11,20 @@ const theme = {
     default: Colors.lightPink,
     disabled: Colors.gray,
   },
+  textInput: {
+    style: {
+      backgroundColor: Colors.black,
+      borderColor: Colors.gray,
+      color: Colors.lightPink,
+    },
+    placeHolderColor: Colors.lightPink,
+  },
   loadingIndicator: Colors.lightPink,
   posterPlaceHolderBorder: Colors.gray,
-  textInputBorder: Colors.gray,
-  textInputPlaceHolder: Colors.gray,
   headerShadowColor: Colors.shark,
   sectionLine: Colors.lightPink,
   addMovieIcon: Colors.lightPink,
   headerTintColor: Colors.gray,
+  movieDetailItemBorder: Colors.gray,
 };
 export default theme;

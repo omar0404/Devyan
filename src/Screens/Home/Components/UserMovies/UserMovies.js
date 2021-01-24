@@ -3,13 +3,20 @@ import {View, Text, ScrollView, ImageSourcePropType} from 'react-native';
 import {isEmpty as _isEmpty, map as _map} from 'lodash';
 import PropTypes from 'prop-types';
 import styles from './styles';
-import {MovieCard} from 'MoviesApp/src/Components';
+import {MovieCard} from 'Devyan/src/Components';
 
-const renderMovie = (movie, index) => (
-  // used index as key not unique key as there is no re-order or update to movie component
-  <MovieCard key={index} movie={movie} />
-);
-const UserMovies = ({movies}) => {
+const renderMovie = (movie, onUnLikePress, onMoviePress) => {
+  return (
+    <MovieCard
+      onPress={() => onMoviePress(movie)}
+      onLikePress={() => onUnLikePress(movie)}
+      key={movie.id}
+      movie={movie}
+      isLiked
+    />
+  );
+};
+const UserMovies = ({movies, onUnLikePress, onMoviePress}) => {
   const hasMovies = !_isEmpty(movies);
   if (!hasMovies) {
     return (
@@ -22,14 +29,17 @@ const UserMovies = ({movies}) => {
   }
   return (
     <ScrollView style={styles.moviesContainer} horizontal>
-      {_map(movies, renderMovie)}
+      {_map(movies, (movie) => renderMovie(movie, onUnLikePress, onMoviePress))}
     </ScrollView>
   );
 };
 UserMovies.propTypes = {
+  onUnLikePress: PropTypes.func,
+  onMoviePress: PropTypes.func,
   movies: PropTypes.oneOfType([
     PropTypes.array,
-    PropTypes.objectOf({
+    PropTypes.shape({
+      id: PropTypes.string,
       posterUri: ImageSourcePropType,
       title: PropTypes.string,
       overview: PropTypes.string,

@@ -1,6 +1,6 @@
 import 'react-native';
 import React from 'react';
-import {Section} from 'MoviesApp/src/Components';
+import {Section} from 'Devyan/src/Components';
 
 import renderer from 'react-test-renderer';
 

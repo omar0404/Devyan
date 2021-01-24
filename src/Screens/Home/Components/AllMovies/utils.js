@@ -1,11 +1,11 @@
-import {POSTER_BASE_URL} from 'MoviesApp/src/Config';
-
+import {POSTER_BASE_URL} from 'Devyan/src/Config';
 const mapMovieObject = (movie) => {
   return {
     title: movie.title,
-    posterUri: `${POSTER_BASE_URL}${movie.poster_path}`,
+    posterUri: `${POSTER_BASE_URL}${movie.posterPath}`,
     overview: movie.overview,
-    date: movie.release_date,
+    date: movie.releaseDate,
+    ...movie,
   };
 };
 export {mapMovieObject};

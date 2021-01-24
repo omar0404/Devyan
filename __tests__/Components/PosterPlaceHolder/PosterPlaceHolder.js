@@ -1,6 +1,6 @@
 import 'react-native';
 import React from 'react';
-import {PosterPlaceHolder} from 'MoviesApp/src/Components';
+import {PosterPlaceHolder} from 'Devyan/src/Components';
 
 import renderer from 'react-test-renderer';
 

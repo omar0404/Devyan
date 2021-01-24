@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import theme from 'MoviesApp/src/Theme';
+import theme from 'Devyan/src/Theme';
 
 const styles = StyleSheet.create({
   container: {
@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
   },
   titleDateContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     borderColor: 'white',
+    justifyContent: 'space-between',
   },
   poster: {
     width: null,
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
   date: {
     color: theme.text.teritary,
     fontWeight: 'bold',
-    marginLeft: 10,
     flex: 1,
     textAlign: 'right',
   },

@@ -1,9 +1,9 @@
 import 'react-native';
 import React from 'react';
-import {MovieCard} from 'MoviesApp/src/Components';
+import {MovieCard} from 'Devyan/src/Components';
 
 import renderer from 'react-test-renderer';
-import {POSTER_BASE_URL} from 'MoviesApp/src/Config';
+import {POSTER_BASE_URL} from 'Devyan/src/Config';
 
 describe('Movie Card Componennt', () => {
   it('renders correctly', () => {

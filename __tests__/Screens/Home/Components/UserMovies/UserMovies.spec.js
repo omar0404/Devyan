@@ -1,6 +1,6 @@
 import React from 'react';
 import {create} from 'react-test-renderer';
-import {UserMovies} from 'MoviesApp/src/Screens/Home/Components';
+import {UserMovies} from 'Devyan/src/Screens/Home/Components';
 import {shallow} from 'enzyme';
 
 describe('UserMovies Component with no movies', () => {
