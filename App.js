@@ -1,4 +1,4 @@
-import RootNavigation from 'MoviesApp/src/Navigation';
+import RootNavigation from 'Devyan/src/Navigation';
 import React from 'react';
 import {StatusBar} from 'react-native';
 const App = () => {
